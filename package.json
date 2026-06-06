@@ -1,0 +1,40 @@
+{
+  "name": "travel-pricing-volatility-router",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Travel pricing volatility router for fare spikes, demand pressure, blackout risk, and route-level remediation.",
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "coverage": "vitest run --coverage",
+    "build": "tsc -p tsconfig.json",
+    "demo": "tsx scripts/run_demo.ts",
+    "python:test": "python -m unittest discover -s python -p \"*_test.py\"",
+    "java:test": "javac java/src/VolatilityRouter.java java/test/VolatilityRouterTest.java -d java/out && java -cp java/out VolatilityRouterTest",
+    "sql:check": "tsx scripts/check_sql.ts",
+    "prerender": "tsx scripts/prerender.ts",
+    "smoke": "tsx scripts/smoke_check.ts",
+    "verify": "npm run lint && npm run typecheck && npm run coverage && npm run build && npm run demo && npm run python:test && npm run java:test && npm run sql:check && npm run prerender && npm run smoke"
+  },
+  "keywords": [
+    "travel",
+    "hospitality",
+    "pricing",
+    "volatility",
+    "java",
+    "python",
+    "sql"
+  ],
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.2",
+    "@vitest/coverage-v8": "^4.1.8",
+    "eslint": "^9.39.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1",
+    "vitest": "^4.1.8"
+  }
+}

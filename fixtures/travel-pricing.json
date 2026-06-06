@@ -1,0 +1,45 @@
+{
+  "asOf": "2026-06-06T09:00:00Z",
+  "network": "fare, demand, blackout, loyalty, and route volatility lanes",
+  "routes": [
+    {
+      "routeId": "atlanta-orlando-summer",
+      "segment": "Family leisure corridor",
+      "baselineFareUsd": 420,
+      "observedFareUsd": 612,
+      "loadFactorPercent": 91,
+      "fuelMoveBps": 38,
+      "demandSpikeIndex": 74,
+      "searchToBookRatio": 11,
+      "blackoutWindowCount": 3,
+      "owner": "Revenue management",
+      "nextAction": "Throttle discount exposure and open controlled inventory before family travel demand breaks conversion."
+    },
+    {
+      "routeId": "sfo-tokyo-award-window",
+      "segment": "International loyalty redemption",
+      "baselineFareUsd": 1180,
+      "observedFareUsd": 1295,
+      "loadFactorPercent": 83,
+      "fuelMoveBps": 21,
+      "demandSpikeIndex": 42,
+      "searchToBookRatio": 6,
+      "blackoutWindowCount": 1,
+      "owner": "Loyalty pricing",
+      "nextAction": "Refresh award inventory rules and route partner-seat exposure into one pricing review."
+    },
+    {
+      "routeId": "nyc-london-business",
+      "segment": "Business transatlantic",
+      "baselineFareUsd": 890,
+      "observedFareUsd": 870,
+      "loadFactorPercent": 76,
+      "fuelMoveBps": 12,
+      "demandSpikeIndex": 18,
+      "searchToBookRatio": 4,
+      "blackoutWindowCount": 0,
+      "owner": "Commercial analytics",
+      "nextAction": "Keep executive fare narrative current and avoid unnecessary promotional dilution."
+    }
+  ]
+}
