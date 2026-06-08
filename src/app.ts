@@ -49,6 +49,19 @@ export function renderApp(input: TravelInput): string {
     dt { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
     dd { margin: 3px 0 0; font-weight: 800; }
     strong { color: var(--text); line-height: 1.45; }
+    .proof-pack { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 16px; margin-top: 22px; }
+    .proof-card {
+      background: linear-gradient(180deg, rgba(18,28,46,.94), rgba(10,16,28,.92));
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 16px 42px rgba(0,0,0,.18);
+    }
+    .proof-card small { display: block; color: var(--cyan); font-family: "Consolas", monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; margin-bottom: 10px; }
+    .proof-card h2 { font-size: 1.35rem; margin: 0 0 10px; letter-spacing: -.03em; }
+    .proof-card p { margin: 0; color: var(--muted); line-height: 1.62; }
+    .proof-card ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.75; }
+    .proof-card li::marker { color: var(--cyan); }
     footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
     @media (max-width: 820px) { .metrics, .grid { grid-template-columns: 1fr; } h1 { font-size: 52px; } }
   </style>
@@ -66,6 +79,23 @@ export function renderApp(input: TravelInput): string {
       </div>
     </section>
     <section class="grid">${routeCards}</section>
+    <section class="proof-pack" aria-label="Evidence and board pack">
+      <article class="proof-card">
+        <small>Evidence matrix</small>
+        <h2>What leaders can inspect</h2>
+        <p>Each lane keeps the source signal, owner, risk posture, and next decision in the same public proof surface instead of hiding the work in screenshots.</p>
+      </article>
+      <article class="proof-card">
+        <small>Board pack builder</small>
+        <h2>How the packet gets used</h2>
+        <ul><li>Translate technical telemetry into decision language.</li><li>Separate watch, contain, and escalation posture.</li><li>Keep remediation evidence attached to accountable owners.</li></ul>
+      </article>
+      <article class="proof-card">
+        <small>Public-demo boundary</small>
+        <h2>What is intentionally synthetic</h2>
+        <p>Demo fixtures are synthetic and credential-free; the pattern is reusable for real diligence packets without exposing customer or regulated data.</p>
+      </article>
+    </section>
     <footer>Travel Pricing Volatility Router · GitHub Pages proof surface · ${summary.asOf}</footer>
   </main>
 </body>
